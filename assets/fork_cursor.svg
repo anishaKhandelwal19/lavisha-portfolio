@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+  <!-- Aesthetic Metallic Fork Cursor with Pink Accent -->
+  <g transform="rotate(-25 18 18)">
+    <!-- Fork Tines (Prongs) -->
+    <path d="M11 2v9c0 2.2 1.8 4 4 4h6c2.2 0 4-1.8 4-4V2h-2.2v7c0 1.1-.9 2-2 2s-2-.9-2-2V2h-1.6v7c0 1.1-.9 2-2 2s-2-.9-2-2V2H11z" fill="#F793BD" stroke="#201412" stroke-width="1.5" stroke-linejoin="round"/>
+    
+    <!-- Fork Stem & Handle -->
+    <path d="M16 15v16c0 1.1.9 2 2 2s2-.9 2-2V15h-4z" fill="#E6E9EB" stroke="#201412" stroke-width="1.5" stroke-linejoin="round"/>
+    
+    <!-- Metallic Highlight -->
+    <line x1="17.5" y1="16" x2="17.5" y2="30" stroke="#FFFFFF" stroke-width="1" opacity="0.8"/>
+  </g>
+</svg>

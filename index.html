@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's in My Tray | Lavisha's Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Orbitron:wght@700;800;900&family=Playfair Display:ital,wght@0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- GLOBAL TOP PINK BAND WITH UPPERCASE ROBOTIC BRAND NAME ("LAVISHA" NAVIGATES BACK HOME) -->
+    <header class="global-pink-bar">
+        <button id="globalHomeBtn" class="brand-home-btn" title="Return to Home Page">
+            <span class="brand-name">LAVISHA</span>
+        </button>
+    </header>
+
+    <!-- HOME VIEW: "WHAT'S IN MY TRAY" THEME -->
+    <main id="homeView" class="view active-view">
+
+        <!-- FLOATING NON-SHINY BEIGE & PINK STARS SCATTERED ACROSS FULL VIEWPORT (20 STARS) -->
+        <span class="star star-1 star-pink">★</span>
+        <span class="star star-2 star-beige">✦</span>
+        <span class="star star-3 star-pink">✦</span>
+        <span class="star star-4 star-beige">★</span>
+        <span class="star star-5 star-pink">✦</span>
+        <span class="star star-6 star-beige">★</span>
+        <span class="star star-7 star-pink">✦</span>
+        <span class="star star-8 star-beige">★</span>
+
+        <span class="star star-9 star-beige">★</span>
+        <span class="star star-10 star-pink">✦</span>
+        <span class="star star-11 star-beige">✦</span>
+        <span class="star star-12 star-pink">★</span>
+
+        <span class="star star-13 star-beige">✦</span>
+        <span class="star star-14 star-pink">★</span>
+        <span class="star star-15 star-beige">✦</span>
+        <span class="star star-16 star-pink">★</span>
+        <span class="star star-17 star-beige">✦</span>
+        <span class="star star-18 star-pink">★</span>
+        <span class="star star-19 star-beige">✦</span>
+        <span class="star star-20 star-pink">★</span>
+
+        <!-- MAIN TRAY SCENE CONTAINER -->
+        <div class="tray-scene">
+
+            <!-- HEADER TITLE -->
+            <div class="tray-header">
+                <h1 class="script-title">What's</h1>
+                <div class="title-sub-row">
+                    <span class="title-in-my">in my</span>
+                    <span class="title-tray-box">tray</span>
+                </div>
+            </div>
+
+            <!-- ULTRA-REALISTIC METALLIC STAINLESS STEEL TRAY -->
+            <div class="chrome-tray-wrapper">
+                <!-- REALISTIC CHROME HANDLES -->
+                <div class="tray-handle handle-left">
+                    <div class="handle-inner-shadow"></div>
+                </div>
+                <div class="tray-handle handle-right">
+                    <div class="handle-inner-shadow"></div>
+                </div>
+
+                <!-- TRAY MAIN BODY -->
+                <div class="chrome-tray">
+                    <div class="tray-rim-bevel">
+                        <div class="tray-inner-surface">
+                            
+                            <!-- 6 TABS PLACED AESTHETICALLY ON THE TRAY -->
+                            <div class="tray-grid" id="trayGrid">
+                                
+                                <!-- TAB 1: ABOUT ME -->
+                                <button class="tray-pill pill-about slot-1" data-target="about-page">
+                                    <span>about me</span>
+                                </button>
+
+                                <!-- TAB 2: RESUME -->
+                                <button class="tray-pill pill-resume slot-2" data-target="resume-page">
+                                    <span>resume</span>
+                                </button>
+
+                                <!-- TAB 3: MY WORK -->
+                                <button class="tray-pill pill-work slot-3" data-target="work-page">
+                                    <span>my work</span>
+                                </button>
+
+                                <!-- TAB 4: EXPERIENCE -->
+                                <button class="tray-pill pill-experience slot-4" data-target="experience-page">
+                                    <span>experience</span>
+                                </button>
+
+                                <!-- TAB 5: LINKEDIN -->
+                                <button class="tray-pill pill-linkedin slot-5" data-target="linkedin-page">
+                                    <span>linkedin</span>
+                                </button>
+
+                                <!-- TAB 6: IDEAS -->
+                                <button class="tray-pill pill-ideas slot-6" data-target="ideas-page">
+                                    <span>ideas</span>
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- SUB-PAGES CONTAINER -->
+    <div id="pagesContainer" class="pages-wrapper">
+
+        <!-- SUBPAGE HEADER (CLEAN QUICK NAV BAR) -->
+        <header class="page-nav">
+            <div class="quick-nav">
+                <button class="q-btn q-about" data-target="about-page">about me</button>
+                <button class="q-btn q-resume" data-target="resume-page">resume</button>
+                <button class="q-btn q-work" data-target="work-page">my work</button>
+                <button class="q-btn q-experience" data-target="experience-page">experience</button>
+                <button class="q-btn q-linkedin" data-target="linkedin-page">linkedin</button>
+                <button class="q-btn q-ideas" data-target="ideas-page">ideas</button>
+            </div>
+        </header>
+
+        <!-- 1. ABOUT ME PAGE (SINGLE FULL-SCREEN TWO-COLUMN LAYOUT) -->
+        <section id="about-page" class="subpage editorial-about-page">
+            <div class="journal-wrapper">
+                
+                <!-- COHESIVE TWO-COLUMN HERO GRID -->
+                <div class="about-hero-grid">
+                    
+                    <!-- LEFT COLUMN — VISUAL ABOUT ME POSTER -->
+                    <div class="about-poster-col">
+                        <div class="hero-poster-wrapper" id="heroPosterWrapper">
+                            <img src="assets/about_hero_graphic.png" alt="About Lavisha Graphic Poster" class="hero-poster-img">
+                        </div>
+                    </div>
+
+                    <!-- RIGHT COLUMN — WRITTEN INTRODUCTION STORY -->
+                    <div class="about-intro-col">
+                        <h1 class="intro-main-title">Hello, I'm Lavisha.</h1>
+
+                        <p class="story-italic-p">
+                            Welcome to my little corner of the internet, where I share my work, what I'm learning, and the curious ideas that refuse to stay inside my head.
+                        </p>
+
+                        <p class="story-italic-p">
+                            Usually, my brain is occupied by ideas, music, curiosity, and an unhealthy number of imaginary projects that I think would be really cool to build. Most of them begin with a simple, <span class="no-wrap">“Wait... what if?”</span>
+                        </p>
+
+                        <p class="story-italic-p">
+                            Outside of work, you'll usually find me listening to music, reading, journaling, dancing around my room, or convincing myself that this will be the year I finally master the guitar and piano.
+                        </p>
+
+                        <p class="story-italic-p">
+                            Professionally, I'm drawn to strategy, branding, and marketing. I enjoy translating ideas into thoughtful brand narratives through content, personal branding, social media strategy, and influencer partnerships. Creating work that is both meaningful and memorable.
+                        </p>
+
+                        <p class="story-italic-p">
+                            Lately, I've been fascinated by category creation, consumer psychology, and the intersection of business and human behaviour. I'm constantly collecting ideas, questioning everyday experiences, and exploring concepts I'd love to turn into real ventures someday.
+                        </p>
+
+                        <p class="story-italic-p">
+                            Anyway, thanks for stopping by. I hope you find something here that makes you think, smile, or maybe even inspires your own <span class="no-wrap">“what if?”</span>
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 2. RESUME PAGE (LAVISHA KHANDELWAL OFFICIAL RESUME) -->
+        <section id="resume-page" class="subpage">
+            <div class="content-box resume-document-box">
+                
+                <!-- HEADER & CONTACT INFO -->
+                <div class="resume-header-row">
+                    <div>
+                        <span class="badge badge-resume">resume</span>
+                        <h1 class="resume-name-title">LAVISHA KHANDELWAL</h1>
+                        <p class="resume-contact-sub">
+                            <a href="mailto:lavishakhandelwal@imthyderabad.edu.in"><i class="fa-solid fa-envelope"></i> lavishakhandelwal@imthyderabad.edu.in</a>
+                            <span class="dot-sep">•</span>
+                            <a href="https://www.linkedin.com/in/lavisha-khandelwal-a56751230" target="_blank"><i class="fa-brands fa-linkedin"></i> Linkedin</a>
+                            <span class="dot-sep">•</span>
+                            <span><i class="fa-solid fa-location-dot"></i> Hyderabad, India</span>
+                        </p>
+                    </div>
+                    <a href="assets/Lavisha_Khandelwal_Resume.pdf" download="Lavisha_Khandelwal_Resume.pdf" class="btn-download">
+                        <i class="fa-solid fa-file-arrow-down"></i> Download Resume PDF
+                    </a>
+                </div>
+
+                <hr class="divider">
+
+                <!-- SUMMARY -->
+                <div class="resume-sec">
+                    <h2 class="resume-sec-title">SUMMARY</h2>
+                    <p class="resume-sec-text">
+                        Ambitious MBA candidate with a strong foundation in marketing research, brand strategy, and campaign development. Driving results by combining analytical thinking with creative problem-solving to uncover consumer insights and build compelling brand narratives. Exploring brand strategy and marketing roles. Also open for exciting and challenging opportunities.
+                    </p>
+                </div>
+
+                <!-- WORK EXPERIENCE -->
+                <div class="resume-sec">
+                    <h2 class="resume-sec-title">WORK EXPERIENCE</h2>
+
+                    <div class="resume-item">
+                        <div class="resume-item-header">
+                            <h3>Sales and marketing Intern, <span>Mayora India</span></h3>
+                            <span class="resume-date">Apr’26 – June’26</span>
+                        </div>
+                        <ul class="resume-list">
+                            <li>Conducted primary consumer and retailer research across Hyderabad to generate insights for product positioning and market strategy.</li>
+                            <li>Assisted in developing go-to-market recommendations for a healthy snacking product through competitor analysis, consumer feedback, and market research.</li>
+                            <li>Coordinated with distributors, retailers, and internal teams during sales acceleration initiatives, visibility drives, and product sampling campaigns.</li>
+                            <li>Researched, identified, and shortlisted kid influencers for Choki Choki XL, conducted outreach and negotiations, and supported creator onboarding.</li>
+                            <li>Drafted influencer campaign scripts and content briefs aligned with brand objectives and target audience preferences.</li>
+                        </ul>
+                    </div>
+
+                    <div class="resume-item">
+                        <div class="resume-item-header">
+                            <h3>Digital marketing Intern, <span>Arena Infosolutions</span></h3>
+                            <span class="resume-date">Nov’22 – Jan’23</span>
+                        </div>
+                        <ul class="resume-list">
+                            <li>Managed Instagram, LinkedIn, and Facebook with smart content planning to keep brand communication consistent and engaging, improving audience engagement.</li>
+                            <li>Produced audience-centric content (reels and creatives) based on behavioural insights and performance metrics, driving higher interaction rates and increased Instagram page impressions by 400%.</li>
+                            <li>Updated and optimised website pages with SEO-friendly content, improving website visibility by 150%.</li>
+                            <li>Coordinated content calendars and collaborated with teams to ensure the timely execution of campaigns.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- EDUCATION -->
+                <div class="resume-sec">
+                    <h2 class="resume-sec-title">EDUCATION</h2>
+                    <div class="resume-item">
+                        <div class="resume-item-header">
+                            <h3>PGDM – Marketing, <span>IMT, Hyderabad, India</span></h3>
+                            <span class="resume-date">2025–2027 (on-going)</span>
+                        </div>
+                        <ul class="resume-list">
+                            <li>Major in Marketing</li>
+                            <li>The Social Media Coordinator, <strong>International Relations committee</strong>, handle the socials and helped in bringing 3 international professionals on board (France, Dubai) for the Global Immersion Program.</li>
+                            <li>Core member of Social media team of the Cultural Club.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- SKILLS AND CURRENT LEARNINGS -->
+                <div class="resume-sec">
+                    <h2 class="resume-sec-title">SKILLS AND CURRENT LEARNINGS</h2>
+                    <div class="grid-2 resume-skills-grid">
+                        <div class="skills-card">
+                            <h3>TOOLS</h3>
+                            <ul class="skills-list">
+                                <li>Canva, MS Powerpoint, Notion</li>
+                                <li>SEMrush and On-page SEO</li>
+                                <li>Confident english speaker and writer</li>
+                            </ul>
+                        </div>
+                        <div class="skills-card">
+                            <h3>CERTIFICATES</h3>
+                            <ul class="skills-list">
+                                <li>Strategic brand management (2026)</li>
+                                <li>Digital Marketing (6 month course)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 3. MY WORK PAGE — PERSONAL EDITORIAL JOURNAL & WRITING ARCHIVE -->
+        <section id="work-page" class="subpage">
+            <div class="content-box journal-archive-box">
+                <span class="journal-tag-label">Featured Writing</span>
+                <h1 class="journal-main-heading">Notes, Brand Essays & Observations</h1>
+                <p class="journal-lead-sub">A personal collection of essays on brand strategy, consumer psychology, and real-world market experiences.</p>
+                
+                <hr class="journal-divider">
+
+                <div class="journal-grid">
+                    
+                    <!-- ENTRY 1 (Army School Truck Photo) -->
+                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7458425612605730816/" target="_blank" rel="noopener noreferrer" class="journal-card">
+                        <div class="journal-img-box">
+                            <img src="assets/article_cover_1.jpg" alt="Point of Parity vs. Point of Differentiation" class="journal-img">
+                        </div>
+                        <div class="journal-card-body">
+                            <span class="journal-card-meta">Brand Strategy • May 2026</span>
+                            <h2 class="journal-card-title">Point of Parity vs. Point of Differentiation (What's Your Truck?)</h2>
+                            <p class="journal-card-excerpt">“Imagine a truck picking and dropping kids to school. Not a bus. A truck. You see it and you already know — Army school. That truck carries a personality no yellow bus ever could. That's differentiation. Not better. Just different.”</p>
+                            <span class="journal-read-more">Read on LinkedIn <i class="fa-solid fa-arrow-right-long"></i></span>
+                        </div>
+                    </a>
+
+                    <!-- ENTRY 2 (Cat Artwork - Jokes On You) -->
+                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7451883617846476800/" target="_blank" rel="noopener noreferrer" class="journal-card">
+                        <div class="journal-img-box">
+                            <img src="assets/article_cover_2.png" alt="You Can Block an Ad. You Cannot Block a Feeling." class="journal-img">
+                        </div>
+                        <div class="journal-card-body">
+                            <span class="journal-card-meta">Experiential Marketing • Apr 2026</span>
+                            <h2 class="journal-card-title">You Can Block an Ad. You Cannot Block a Feeling.</h2>
+                            <p class="journal-card-excerpt">“1.77 billion people installed an ad blocker. Nearly 1 in 4 internet users go out of their way to make sure your brand never reaches them. Nobody installs blockers against a memory. You can block an ad. You cannot block a feeling.”</p>
+                            <span class="journal-read-more">Read on LinkedIn <i class="fa-solid fa-arrow-right-long"></i></span>
+                        </div>
+                    </a>
+
+                    <!-- ENTRY 3 (Campus Walkway Photo) -->
+                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7450809025593540610/" target="_blank" rel="noopener noreferrer" class="journal-card">
+                        <div class="journal-img-box">
+                            <img src="assets/article_cover_3.jpg" alt="Every Marketing Role Starts with Sales" class="journal-img">
+                        </div>
+                        <div class="journal-card-body">
+                            <span class="journal-card-meta">Sales & Field Insights • Apr 2026</span>
+                            <h2 class="journal-card-title">Every Marketing Role Starts with Sales</h2>
+                            <p class="journal-card-excerpt">“Visiting different stores and understanding how things actually move. The same product works differently in different localities. The same pitch gets completely different reactions. Sales isn’t basic — it’s brilliantly nuanced.”</p>
+                            <span class="journal-read-more">Read on LinkedIn <i class="fa-solid fa-arrow-right-long"></i></span>
+                        </div>
+                    </a>
+
+                    <!-- ENTRY 4 (Entrepx Founder's Journey Frame) -->
+                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7447523375658360832/" target="_blank" rel="noopener noreferrer" class="journal-card">
+                        <div class="journal-img-box">
+                            <img src="assets/article_cover_4.jpg" alt="Outdoor Marketing & The ₹2 Chocolate Test" class="journal-img">
+                        </div>
+                        <div class="journal-card-body">
+                            <span class="journal-card-meta">Outdoor Marketing • Apr 2026</span>
+                            <h2 class="journal-card-title">Outdoor Marketing & The ₹2 Chocolate Test</h2>
+                            <p class="journal-card-excerpt">“A product built for kids? Apparently also has 20-year-old fans. I saw college students absolutely losing it over a ₹2 chocolate. The strategy deck definitely did not cover this. Outdoor marketing doesn’t just give you insights — it humbles you.”</p>
+                            <span class="journal-read-more">Read on LinkedIn <i class="fa-solid fa-arrow-right-long"></i></span>
+                        </div>
+                    </a>
+
+                    <!-- ENTRY 5 (Bingo Packet Photo) -->
+                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7426908205508808705/" target="_blank" rel="noopener noreferrer" class="journal-card">
+                        <div class="journal-img-box">
+                            <img src="assets/article_cover_5.jpg" alt="Availability Builds Preference: The ITC Bingo! Story" class="journal-img">
+                        </div>
+                        <div class="journal-card-body">
+                            <span class="journal-card-meta">Distribution Strategy • Feb 2026</span>
+                            <h2 class="journal-card-title">Availability Builds Preference: The ITC Bingo! Story</h2>
+                            <p class="journal-card-excerpt">“A year ago, I didn’t even know Bingo! chips existed. But after a 1-day tour at Ramoji Film City where Bingo was the only counter option, it became my favourite. Availability builds familiarity. Familiarity builds preference. Preference builds habit.”</p>
+                            <span class="journal-read-more">Read on LinkedIn <i class="fa-solid fa-arrow-right-long"></i></span>
+                        </div>
+                    </a>
+
+                    <!-- ENTRY 6 -->
+                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7420437690652946432/" target="_blank" rel="noopener noreferrer" class="journal-card">
+                        <div class="journal-img-box">
+                            <img src="assets/article_cover_6.jpg" alt="Why Aren't Indian Brands Turning City Walls into Stories?" class="journal-img">
+                        </div>
+                        <div class="journal-card-body">
+                            <span class="journal-card-meta">Brand Storytelling • Jan 2026</span>
+                            <h2 class="journal-card-title">Why Aren't Indian Brands Turning City Walls into Stories?</h2>
+                            <p class="journal-card-excerpt">“Global fashion houses like Gucci, Bottega Veneta, and Miu Miu have all used murals as part of brand launches. Not as decoration, but as storytelling. India has a massive outdoor advertising culture — why aren't our brands doing this?”</p>
+                            <span class="journal-read-more">Read on LinkedIn <i class="fa-solid fa-arrow-right-long"></i></span>
+                        </div>
+                    </a>
+
+                    <!-- ENTRY 7 -->
+                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7398739177816776704/" target="_blank" rel="noopener noreferrer" class="journal-card">
+                        <div class="journal-img-box">
+                            <img src="assets/article_cover_7.jpg" alt="An Ad That Can Last for a Decade? (Notebook Back Covers)" class="journal-img">
+                        </div>
+                        <div class="journal-card-body">
+                            <span class="journal-card-meta">Creative Placements • Nov 2025</span>
+                            <h2 class="journal-card-title">An Ad That Can Last for a Decade? (Notebook Back Covers)</h2>
+                            <p class="journal-card-excerpt">“During a statistics lecture, my friend was doodling on the back of her notebook, and I saw a QR code. It occurred to me that these pages could be mini billboards for brands. The back page might just be the most underrated marketing placement waiting to blow up.”</p>
+                            <span class="journal-read-more">Read on LinkedIn <i class="fa-solid fa-arrow-right-long"></i></span>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. EXPERIENCE PAGE (EXPANDED WORK EXPERIENCE + LEADERSHIP & CAMPUS LIFE) -->
+        <section id="experience-page" class="subpage">
+            <div class="content-box experience-box">
+                <span class="badge badge-experience">experience</span>
+                <h1>Experience & Leadership ⏳</h1>
+                <p class="lead">A detailed journey through my marketing roles, campus leadership, and community initiatives.</p>
+
+                <hr class="divider">
+
+                <!-- 1. WORK EXPERIENCE SECTION -->
+                <div class="exp-section">
+                    <h2 class="exp-sec-heading"><i class="fa-solid fa-briefcase"></i> Work Experience</h2>
+                    <div class="timeline exp-timeline">
+                        
+                        <!-- WORK ITEM 1 -->
+                        <div class="timeline-row exp-timeline-card">
+                            <div class="time-year">Apr’26 – Jun’26</div>
+                            <div class="time-detail">
+                                <div class="exp-role-header">
+                                    <h3>Sales & Marketing Intern</h3>
+                                    <span class="exp-org">Mayora India</span>
+                                </div>
+                                <ul class="exp-bullet-list">
+                                    <li>Conducted primary consumer and retailer research across Hyderabad to generate actionable insights for product positioning and market strategy.</li>
+                                    <li>Assisted in developing go-to-market recommendations for a healthy snacking product through competitor analysis, consumer feedback, and market research.</li>
+                                    <li>Coordinated with distributors, retailers, and internal teams during sales acceleration, visibility drives, merchandising, and product sampling initiatives.</li>
+                                    <li>Researched, identified, and shortlisted kid influencers for Choki Choki XL, conducting outreach and negotiations, and supported creator onboarding.</li>
+                                    <li>Drafted influencer campaign scripts and content briefs aligned with brand objectives and target audience preferences.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- WORK ITEM 2 -->
+                        <div class="timeline-row exp-timeline-card">
+                            <div class="time-year">Nov’22 – Jan’23</div>
+                            <div class="time-detail">
+                                <div class="exp-role-header">
+                                    <h3>Digital Marketing Intern</h3>
+                                    <span class="exp-org">Arena Infosolutions</span>
+                                </div>
+                                <ul class="exp-bullet-list">
+                                    <li>Managed Instagram, LinkedIn, and Facebook through structured content planning to keep brand communication consistent and engaging, improving audience engagement.</li>
+                                    <li>Produced audience-centric content (reels and creatives) based on behavioural insights and performance metrics, driving higher interaction rates and increasing Instagram page impressions by 400%.</li>
+                                    <li>Updated and optimised website pages with SEO-friendly content, contributing to a 150% improvement in website visibility.</li>
+                                    <li>Coordinated content calendars and worked with cross-functional teams to ensure the timely execution of marketing campaigns.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <hr class="divider">
+
+                <!-- 2. LEADERSHIP & CAMPUS LIFE SECTION -->
+                <div class="exp-section">
+                    <h2 class="exp-sec-heading"><i class="fa-solid fa-people-roof"></i> Leadership & Campus Life</h2>
+                    <div class="timeline exp-timeline">
+
+                        <!-- LEADERSHIP ITEM 1 -->
+                        <div class="timeline-row exp-timeline-card">
+                            <div class="time-year">Campus Role</div>
+                            <div class="time-detail">
+                                <div class="exp-role-header">
+                                    <h3>Social Media Coordinator</h3>
+                                    <span class="exp-org">International Relations Committee (IRC) — IMT Hyderabad</span>
+                                </div>
+                                <ul class="exp-bullet-list">
+                                    <li>Managed social media and content strategy for the committee, creating and coordinating content to communicate international opportunities and committee activities.</li>
+                                    <li>Contributed to global outreach and stakeholder coordination, helping bring 3 international professionals from France and Dubai on board for the Global Immersion Program.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- LEADERSHIP ITEM 2 -->
+                        <div class="timeline-row exp-timeline-card">
+                            <div class="time-year">Campus Role</div>
+                            <div class="time-detail">
+                                <div class="exp-role-header">
+                                    <h3>Social Media Team / Core Member</h3>
+                                    <span class="exp-org">Antaragna (Cultural Club) — IMT Hyderabad</span>
+                                </div>
+                                <ul class="exp-bullet-list">
+                                    <li>Served as a core member of the social media team, driving the club’s digital presence and event communication across campus.</li>
+                                    <li>Created engaging social media content and coordinated digital campaigns around cultural activities, campus events, and student celebrations.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- LEADERSHIP ITEM 3 -->
+                        <div class="timeline-row exp-timeline-card">
+                            <div class="time-year">Volunteering</div>
+                            <div class="time-detail">
+                                <div class="exp-role-header">
+                                    <h3>Volunteer</h3>
+                                    <span class="exp-org">Manchapoonam Foundation</span>
+                                </div>
+                                <ul class="exp-bullet-list">
+                                    <li>Actively involved in community engagement and social volunteering initiatives with the Manchapoonam Foundation.</li>
+                                    <li>Demonstrated teamwork, personal responsibility, and community contribution beyond academic and professional roles.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 5. LINKEDIN PAGE -->
+        <section id="linkedin-page" class="subpage">
+            <div class="content-box">
+                <span class="badge badge-linkedin">linkedin</span>
+                <h1>LinkedIn & Networking 🌐</h1>
+                <p class="lead">Let's connect professionally on LinkedIn.</p>
+                <hr class="divider">
+                <div class="linkedin-card">
+                    <div class="profile-header">
+                        <div class="avatar"><i class="fa-brands fa-linkedin-in"></i></div>
+                        <div>
+                            <h2>Lavisha Khandelwal</h2>
+                            <p class="text-muted">MBA Candidate @ IMT Hyderabad | Marketing Strategy & Branding</p>
+                        </div>
+                    </div>
+                    <p>Connect with me on LinkedIn to explore potential collaborations, brand strategy projects, or marketing discussions!</p>
+                    <a href="https://www.linkedin.com/in/lavisha-khandelwal-a56751230" target="_blank" rel="noopener noreferrer" class="btn-linkedin">
+                        <i class="fa-brands fa-linkedin"></i> Visit LinkedIn Profile
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. IDEAS PAGE (CLEAN INTENTIONALLY SPACIOUS CONTAINER) -->
+        <section id="ideas-page" class="subpage">
+            <div class="content-box ideas-content-box">
+                <span class="badge badge-ideas">ideas</span>
+                <h1>Ideas & Experiments 💡</h1>
+                <p class="lead">Brainstorms, design concepts, and creative thoughts.</p>
+                <hr class="divider">
+                <!-- Section intentionally left clean and spacious for future real projects -->
+            </div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
