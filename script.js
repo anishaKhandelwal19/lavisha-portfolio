@@ -7,10 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const trayPills = document.querySelectorAll('.tray-pill');
     const homeView = document.getElementById('homeView');
     const pagesContainer = document.getElementById('pagesContainer');
-    const globalHomeBtn = document.getElementById('globalHomeBtn');
-    const subpages = document.querySelectorAll('.subpage');
-    const qBtns = document.querySelectorAll('.q-btn');
-
     const heroPosterWrapper = document.getElementById('heroPosterWrapper');
 
     // AUTOMATIC FLY-IN ONTO METALLIC TRAY ON LOAD
@@ -72,25 +68,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ROUTING TO SUBPAGES
     function openSubpage(targetPageId) {
+        const targetPage = document.getElementById(targetPageId);
+        if (!targetPage) return;
+
         homeView.classList.remove('active-view');
         pagesContainer.classList.add('active');
 
-        subpages.forEach(page => {
-            if (page.id === targetPageId) {
-                page.classList.add('active-page');
-            } else {
-                page.classList.remove('active-page');
-            }
+        document.querySelectorAll('.subpage').forEach(page => {
+            page.classList.toggle('active-page', page.id === targetPageId);
         });
 
-        // Reset scroll position and initial fade opacity
         window.scrollTo({ top: 0, behavior: 'instant' });
         if (heroPosterWrapper) {
             heroPosterWrapper.style.opacity = '1';
             heroPosterWrapper.style.transform = 'none';
         }
 
-        // Trigger observer re-check
         setTimeout(() => {
             document.querySelectorAll('.scroll-reveal').forEach(el => {
                 const rect = el.getBoundingClientRect();
@@ -104,34 +97,30 @@ document.addEventListener('DOMContentLoaded', () => {
     function returnToTray() {
         pagesContainer.classList.remove('active');
         homeView.classList.add('active-view');
-
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // Attach Click Events to Pills
-    trayPills.forEach(pill => {
-        pill.addEventListener('click', () => {
-            const targetId = pill.getAttribute('data-target');
-            if (targetId) {
-                openSubpage(targetId);
-            }
-        });
-    });
+    document.addEventListener('click', (event) => {
+        const clickEl = event.target.nodeType === 1 ? event.target : event.target.parentElement;
+        if (!clickEl || typeof clickEl.closest !== 'function') return;
 
-    // Global Home Button ("LAVISHA" top left pink band handles return to tray)
-    if (globalHomeBtn) {
-        globalHomeBtn.addEventListener('click', () => {
+        const homeTrigger = clickEl.closest('#globalHomeBtn');
+        if (homeTrigger) {
             returnToTray();
-        });
-    }
+            return;
+        }
 
-    qBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const targetId = btn.getAttribute('data-target');
-            if (targetId) {
-                openSubpage(targetId);
-            }
-        });
+        const trigger = clickEl.closest('[data-target]');
+        if (!trigger) return;
+
+        const href = trigger.getAttribute('href') || '';
+        if (href.startsWith('http')) return;
+
+        const targetId = trigger.getAttribute('data-target');
+        if (!targetId) return;
+
+        event.preventDefault();
+        openSubpage(targetId);
     });
 
 });
